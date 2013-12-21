@@ -19,21 +19,40 @@ class index_controller extends base_controller {
 			$this->template->content = View::instance('v_index_index');
 			
 		# Now set the <title> tag
-			$this->template->title = "Hello World";
+			$this->template->title = "Ducks of a Different Colour";
 	
 		# CSS/JS includes
-			/*
-			$client_files_head = Array("");
-	    	$this->template->client_files_head = Utils::load_client_files($client_files);
-	    	
-	    	$client_files_body = Array("");
+			
+			$client_files_head = Array(
+				"/css/ducks.css"
+				);
+	    	$this->template->client_files_head = Utils::load_client_files($client_files_head);
+
+	    	$client_files_body = Array(
+	    		"http://code.jquery.com/jquery-1.9.1.js",
+	    		"http://code.jquery.com/ui/1.10.3/jquery-ui.js",
+	    		"/js/jquery.form.js",
+	    		"/js/users_register.js",
+	    		"/js/jquery.timer.js",
+	    		"/js/default.js"
+	    		);
 	    	$this->template->client_files_body = Utils::load_client_files($client_files_body);   
-	    	*/
+
 	      					     		
 		# Render the view
 			echo $this->template;
 
 	} # End of method
+
+	public function p_signup() {
+
+        #set up the data
+        $_POST['created']   = Time::now();
+        $_POST['token']     = $POST['email'].Utils::generate_random_string();
+
+        DB::instance(DB_NAME)->insert('users',$_POST);
+
+    }
 	
 	
 } # End of class
