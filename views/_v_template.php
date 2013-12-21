@@ -7,6 +7,7 @@
 	
 		<!-- CSS/JS common to whole app -->				
 		<link rel="stylesheet" href="/css/master.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="/css/framework.css">
 	<!--
 		<link rel="stylesheet" type="text/css" href="/css/ducks.css">
 	-->
@@ -55,7 +56,7 @@
 	        </script>
 
 	        <script type="text/javascript">
-	        	var options = {
+	        	var options1 = {
 	        		type: 'post',
 	        		url: 'process.php',
 	        		success: function(response) {
@@ -64,11 +65,12 @@
 	        		}
 	        	}
 
-	        	$('#signin_form').ajaxForm(options);
+	        	$('#signin_form').ajaxForm(options1);
 	        </script>
 
+<!--
 	        <script type="text/javascript">
-	        	var options = {
+	        	var options2 = {
 	        		type: 'post',
 	        		url: 'process.php',
 	        		success: function(response) {
@@ -77,9 +79,9 @@
 	        		}
 	        	}
 
-	        	$('#reg_form').ajaxForm(options);
+	        	$('#reg_form').ajaxForm(options2);
 	        </script>
-
+-->
 
 	    </div>
 

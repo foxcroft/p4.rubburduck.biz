@@ -32,7 +32,7 @@ class index_controller extends base_controller {
 	    		"http://code.jquery.com/jquery-1.9.1.js",
 	    		"http://code.jquery.com/ui/1.10.3/jquery-ui.js",
 	    		"/js/jquery.form.js",
-	    		"/js/users_register.js",
+	//    		"/js/users_register.js",
 	    		"/js/jquery.timer.js",
 	    		"/js/default.js"
 	    		);

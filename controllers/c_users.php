@@ -14,10 +14,18 @@ class users_controller extends base_controller {
 
         # Set up the view
         $this->template->content = View::instance('v_users_signup');
+        $this->template->title   = "Sign Up";
     
+        $client_files_body = Array(
+                "/js/jquery.form.js",
+                "/js/users_register.js"
+            );
+
+        $this->template->client_files_body = Utils::load_client_files($client_files_body);
+
         if($error) {
             $this->template->error_msg = "All fields are required";
-        }
+        };
 
         # Render the view
         echo $this->template;

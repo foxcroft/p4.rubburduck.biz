@@ -10,6 +10,7 @@ var hide_color = '#EEEFFF';
 
 // total number of ducks hiding
 var my_ducks = grid_height * grid_width;
+var party_time = 0;
 
 // colors for different suits
 var color_array = Array(
@@ -20,9 +21,10 @@ var color_array = Array(
 );
 
 $('#ducks_left').html(my_ducks);
+$('#party_timer').html(party_time);
 
 var duck_timer = $.timer(function() {
-	$('#ducks_left').html(++my_ducks);
+	$('#party_timer').html(++party_time);
 });
 duck_timer.set({time: 1000, autostart: false});
 

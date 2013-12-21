@@ -11,7 +11,7 @@
 		<span id='signin_results'>nada</span>
 	</div>
 	<div class="drop_menu" id="register_div" style="display: none;">
-		<form id='reg_form'>
+		<form id='reg_form' action="/users/p_signup">
 			<label for='name'>You are?</label>
 			<input type='text' id='name' name='name'>
 			<input type='submit' value='SIGN ME UP!'>
@@ -70,21 +70,24 @@
 
 		<div id='stats'>
 			<div id='defense' style='font-size:13px;'>
-				<br><br><br>
 				<div><h3>Limey! These ducks are having a party!</h3>
-					You can find them if you just poke around a little.
-					Ducks, as you know, like to stay in single file lines with ducks of the same color.
-					Pointing leftward-rightward, or upward-downward, but always a line,
-					and always close together. But of course, ducks are polite creatures,
-					and a line will happily break apart briefly, if it is to let another
-					line of ducks through.</div><br>
-				<div>Click <strong>GET SUITED!</strong> to start those ducks hiding!
-					Then click a square to try and find them.</div><br>
-					<div>And watch out, Ol' Bannigan is looking for them too!
-						If he finds them all first, <em>he eats them.</em></div><br>
+					It's one of those new parties you've been hearing about: ducks arrive
+					in their own clothes, and then at the party, they change!</div>
+				<div>These ducks have strict rules:
+					every 3 seconds, ducks must change clothes. Problem is, some are too
+					lazy to change every 3 seconds.<br>
+					As chaperone of the duck party, it is your sworn duty to kick out
+					rule-breakers. If you see a duck wearing the same color outfit
+					two turns in a row, click him (or her) out!</div><br>
+				<div>Be careful not to click on a duck who obeyed the rules though. There's a 
+					three strike policy, after which, you'll be <em>fired.</em></div><br>
+				<div>Click <strong>GET SUITED!</strong> to get all the ducks dressed up!
+					Then click START TIMER to start catching cheaters.</div><br>
+				<div>See how quickly you can catch them all cheating! <em>Everyone cheats eventually...</em></div><br>
 			</div>
-			<div id="bann_number">How many ducks are still at the party?</div><div id='ducks_left'></div>
+			<div id="duck_number">How many ducks are still at the party?</div><div id='ducks_left'></div>
 			<br>
+			<div style="font-size: 20px;">PARTY TIMER: <span id="party_timer"></span></div>
 			<div id="bann_status"></div>
 			<div id="badelynge_hit"></div>
 		</div>

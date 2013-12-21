@@ -9,4 +9,4 @@ var options = {
 	}
 };
 
-$('#reg_form').ajaxForm(options);
+$('form').ajaxForm(options);
