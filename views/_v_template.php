@@ -7,8 +7,8 @@
 	
 		<!-- CSS/JS common to whole app -->				
 		<link rel="stylesheet" href="/css/master.css" type="text/css">
-		<link rel="stylesheet" type="text/css" href="/css/framework.css">
 	<!--
+		<link rel="stylesheet" type="text/css" href="/css/framework.css">
 		<link rel="stylesheet" type="text/css" href="/css/ducks.css">
 	-->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

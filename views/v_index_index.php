@@ -2,6 +2,7 @@
 
 <html>
 
+<!--
 	<div class="drop_menu" id="signin_div" style="display: none;">
 		<form id='signin_form'>
 			<label for='name'>You are?</label>
@@ -18,6 +19,7 @@
 		</form>
 		<span id='reg_results'>nada</span>
 	</div>
+-->
 
 	<br>
 	<div id="title"><h1>DUCKS OF A DIFFERENT COLOUR</h1></div>
@@ -90,6 +92,37 @@
 			<div style="font-size: 20px;">PARTY TIMER: <span id="party_timer"></span></div>
 			<div id="bann_status"></div>
 			<div id="badelynge_hit"></div>
+		</div>
+
+		<div id="endform">
+			<div>
+				How did you do?
+				<form id="end_form">
+					<label for='ducks'>Ducks left</label>
+					<input type='text' id='duckies' name='ducks_left'>
+					<label for='strikes'>Strikes</label>
+					<input type='text' id='strikies' name='strikes'>
+					<label for='time'>Party Timer</label>
+					<input type='text' id='timies' name='time_elapsed'>
+					<input type='submit' value='POST UP!'>
+				</form>
+			</div>
+			<div id="end_results">END RESULTS</div><br><br>
+
+			<div id="post_reel">POST REEL<br>
+				<?php foreach($games as $game): ?>
+
+					<?php $game_time = Time::display($game['created']);?>
+					<span id="game_time"><?php echo $game_time;?></span><br>
+
+					<span id="ducksleft"><strong>Ducks left: <?=$game['ducks_left']?></strong>:::
+					Elapsed Time: <?=$game['time_elapsed']?></span>:::
+
+					Strikes: <?=$game['strikes']?>
+					<br><br>
+
+				<?php endforeach; ?>
+			</div>
 		</div>
 
 	</div>

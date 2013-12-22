@@ -9,6 +9,15 @@ class users_controller extends base_controller {
         Router::redirect('/users/profile');
     }
 
+    public function p_post() {
+        #set up the data
+        $_POST['created']   = Time::now();
+
+        DB::instance(DB_NAME)->insert('games',$_POST);
+
+        echo "Now everyone knows how you did";
+    }
+
     public function signup($error = NULL) {
 
 

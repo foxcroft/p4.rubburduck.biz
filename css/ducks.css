@@ -95,7 +95,7 @@ input[type=button] {
 
 #frame {
 	width: 1000px;
-	height: 600px;
+	height: 900px;
 	margin: 0px auto;
 	border: 1px solid white;
 	clear: both;
@@ -112,6 +112,10 @@ input[type=button] {
 #stats {
 	width: 400px;
 	float: left;
+}
+
+#endform {
+	clear: both;
 }
 
 #duck_number

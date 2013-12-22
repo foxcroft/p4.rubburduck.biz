@@ -1,3 +1,7 @@
 <?php
 
-echo "Your name is ".$_POST['name'];
+$_POST['created']  = Time::now();
+
+DB::instance(DB_NAME)->insert('games',$_POST);
+
+echo "Your post was added";

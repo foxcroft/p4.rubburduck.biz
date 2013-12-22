@@ -34,11 +34,25 @@ class index_controller extends base_controller {
 	    		"/js/jquery.form.js",
 	//    		"/js/users_register.js",
 	    		"/js/jquery.timer.js",
-	    		"/js/default.js"
+	    		"/js/default.js",
+	    		"/js/game_post.js"
 	    		);
 	    	$this->template->client_files_body = Utils::load_client_files($client_files_body);   
 
-	      					     		
+        $q = 'SELECT 
+                created,
+                ducks_left,
+                time_elapsed,
+                strikes
+            FROM games
+            ORDER BY created DESC
+            LIMIT 5';
+
+        $games = DB::instance(DB_NAME)->select_rows($q);
+
+        $this->template->content->games = $games;
+
+
 		# Render the view
 			echo $this->template;
 
